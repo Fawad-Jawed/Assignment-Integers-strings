@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // Answer 1
+        // Ek sample list of integers banao
+let numb = [10, 5, 8, 20, 15];
+
+// Pehle element ko maximum assume karo
+let max = numb[0];
+
+// List ke baaki elements ko check karo
+for (let i = 1; i < numb.length; i++) {
+    if (numb[i] > max) {
+        max = numb[i]
+    }
+}
+
+// Maximum element ko print karo
+document.write("Maximum element:", max);
+document.write("<br>")
+document.write("<br>")
+
+// // Answer 2
+// Input list of integers
+const inputList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Initialize an empty list to store even numbers
+const evenList = [];
+
+// Iterate through each element in the input list
+for (let i = 0; i < inputList.length; i++) {
+    // Check if the current element is an even number
+    if (inputList[i] % 2 === 0) {
+        // If even, add it to the evenList
+        evenList.push(inputList[i]);
+    }
+}
+
+// Display the original list and the filtered evenList
+document.write('Original List:', inputList,"<br>");
+document.write('Even Numbers List:', evenList);
+document.write("<br>")
+
+
+        // //   // //Ansewr 3
+        // // const inputs = "Ahmed, Usman, Haider, Ali"
+        // // let reversedString = '';
+        
+        // // for (let i = inputs.length -1; i >= 0; i--) {
+        // //     reversedString += inputs[i];
+        // // }
+        
+        // // console.log(reversedString);
+document.write("<br>")
+
+// // Answer 4
+const inputString = "Hello, how are you?"; // Aap yahaan input string ko change kar sakte hain
+
+let vowelCount = 0;
+
+// Convert the input string to lowercase for case-insensitive counting
+const lowercaseString = inputString.toLowerCase();
+
+// Iterate through each character in the string
+for (let i = 0; i < lowercaseString.length; i++) {
+    // Check if the current character is a vowel (a, e, i, o, u)
+    if (lowercaseString[i] === 'a' ||lowercaseString[i]  === 'e' || lowercaseString[i] === 'i' || lowercaseString[i] === 'o' || lowercaseString[i] === 'u') {
+        vowelCount++;
+    }
+}
+
+document.write(`The number of vowels in the string is: ${vowelCount}`);
+document.write("<br>")
+document.write("<br>")
+
+// // Answer 5
+let input = parseInt(prompt("Enter an integer:"));
+    let factorial = 1;
+
+if (input < 0) {
+    console.log("Factorial is not defined for negative numbers.");
+} else {
+    for (let i = 1; i <= input; i++) {
+        factorial *= i;
+    }
+    document.write("Factorial of ",  input,  " is ", factorial);
+}
+document.write("<br>")
+document.write("<br>")
+
+
+// // Answer 6
+let numbers = [1, 2, 3, 4, 5]; // Example list of integers
+let reversedNumbers = [];
+
+for (let i = numbers.length - 1; i >= 0; i--) {
+    reversedNumbers.push(numbers[i]);
+}
+
+document.write("Original numbers:", numbers,"<br>");
+document.write("Reversed numbers:", reversedNumbers);
+
+document.write("<br>")
+document.write("<br>")
+
+// // Answer 7
+// program to generate fibonacci series up to n terms
+
+// take input from the user
+const number = parseInt(prompt('Enter the number for fibonacci series: '));
+let n1 = 0,
+n2 = 1, 
+nextTerm;
+
+document.write('Fibonacci Series:<br>');
+
+for (let i = 1; i < number; i++) {
+    document.write(n1,'<br>');
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+
+    </script>
+</body>
+</html>
